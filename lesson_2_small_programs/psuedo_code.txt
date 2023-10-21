@@ -1,0 +1,121 @@
+###############################################
+# a method that returns the sum of two integers
+
+# casual psuedo code
+given two integers
+add integer one and integer two together
+
+# formal psuedo code
+START
+
+GET two integers from the user
+SET first integer to integer_one
+SET second integer to integer_two
+SET sum = integer_one + integer_two
+PRINT sum
+
+END
+
+###############################################
+# a method that takes an array of strings, and returns a string that is all those strings concatenated together
+
+# casual psuedo code
+given an array of strings
+iterate through the array one by one
+append each array element to a new string variable
+
+# formal psuedo code
+START
+
+given an array of strings called strings
+
+SET iterator = 0
+SET string = ""
+
+WHILE iterator < number of elements in strings
+  string = string + value within strings at space of iterator
+  iterator = iterator + 1
+
+PRINT string
+
+END
+
+###############################################
+# a method that takes an array of integers, and returns a new array with every other element from the original array, starting with the first element. For instance:
+every_other([1,4,7,2,5]) # => [1,7,5]
+
+# casual psuedo code
+given an array of integers
+iterates through every other element of the array, starting with element 1
+assign each element to a variable
+
+# formal psuedo code
+START
+
+given an array of integers called int_arr
+
+SET iterator = 0
+SET new_arr = []
+
+WHILE iterator < length of int_arr
+  new_arr = new_arr + value of int_arr at iterator
+  iterator = iterator + 2
+
+PRINTS new_arr
+
+END
+
+
+###############################################
+# a method that determines the index of the 3rd occurrence of a given character in a string. For instance, if the given character is 'x' and the string is 'axbxcdxex', the method should return 6 (the index of the 3rd 'x'). If the given character does not occur at least 3 times, return nil.
+
+# casual psuedo code
+given a string
+given a character
+iterate through each character of string
+ - when third occurence of given character is found, return the index of the character
+- if character does not occur at least 3 times, return nil
+
+# formal psuedo code
+START
+
+given a string called str
+given a character call char
+
+SET iterator = 0
+SET num_of_char = 0
+
+WHILE iterator <= length of str
+  IF str at location of iterator equals char
+    num_of_char = num_of_char + 1
+  IF num_of_char equals 3
+    RETURN iterator
+  IF num_of_char < 3
+    RETURN nil
+    
+  iterator = iterator + 1
+  
+  
+###############################################
+# a method that takes two arrays of numbers and returns the result of merging the arrays. The elements of the first array should become the elements at the even indexes of the returned array, while the elements of the second array should become the elements at the odd indexes. For instance:
+merge([1, 2, 3], [4, 5, 6]) # => [1, 4, 2, 5, 3, 6]
+
+# casual psuedo code
+given two arrays of numbers with same size/length
+iterate through both arrays simultaneously
+  - with each iteration add the element from each array to the end of a new array in the order the array was entered
+
+# formal psuedo code
+START
+
+given two arrays named arr1 and arr2
+
+SET iterator = 0
+SET new_arr = []
+
+WHILE iterator <= size of arr1
+  new_arr = new_arr + arr1 at location of iterator
+  new_arr = new_arr + arr2 at location of iterator
+  iterator = iterator + 1
+
+END
