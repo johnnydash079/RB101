@@ -51,7 +51,7 @@ def valid_number?(num)
 end
 
 def valid_float?(num)
-  num.to_f.to_s == num # this fails if i enter .05 need a better way to validate a float
+  num.to_f.to_s == num 
 end
 
 loan_amount = ''
@@ -68,7 +68,7 @@ end
 
 apr = ''
 loop do # apr input loop
-  prompt('Enter the Annual Percentage Rate, expressed as a decimal (Ex: 5%, would be .05)')
+  prompt('Enter the Annual Percentage Rate, expressed as a decimal (Ex: 5%, would be 0.05)')
   apr = Kernel.gets().chomp()
 
   if valid_float?(apr)
@@ -109,5 +109,3 @@ loan_dur_months = loan_dur_months.to_i + (loan_dur_years.to_i * 12)
 monthly_payment = loan_amount.to_i * (monthly_interest_rate / (1 - (1 + monthly_interest_rate)**(-1 * loan_dur_months)))
 
 Kernel.puts(monthly_payment)
-
-# next step is to figure out how to validate a float without requiring a leading 0; ex: 5.0 is accepted, but .05 is not
